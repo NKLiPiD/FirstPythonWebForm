@@ -31,7 +31,7 @@ def hello():
             g = 'M'
         else:
             g = 'F'
-        flash('Hello ' + name + ' '+ surname + ' 1เพศ ' + g)
+        flash('Hello ' + name + ' '+ surname + ' เพศ ' + g)
     else:
         flash('All the form fields are required. ')
     
