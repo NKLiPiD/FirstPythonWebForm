@@ -1,4 +1,4 @@
-Firfrom flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash, request
 from wtforms import Form, TextField, PasswordField, validators, SelectField
 
 # App config.
@@ -31,7 +31,7 @@ def hello():
             g = 'M'
         else:
             g = 'F'
-        flash('Hello ' + name + ' '+ surname + ' 111เพศ ' + g)
+        flash('Hello ' + name + ' '+ surname + ' เพศ ' + g)
     else:
         flash('All the form fields are required. ')
     
