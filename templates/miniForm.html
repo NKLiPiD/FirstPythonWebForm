@@ -1,0 +1,28 @@
+<title>Reusable Form Demo</title>
+ 
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message[1] }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+<form action="" method="post">
+            {{ form.clg }}
+<!--<div class="input text">-->
+<div>
+            {{ form.name.label }}&nbsp;{{ form.name }}
+            <!--<input type="text" placeholder="Name" name="name" value="{{ request.form.name }}">-->
+            <br/>
+            {{ form.surname.label }}&nbsp;{{ form.surname }}
+            <!--<input type="text" placeholder="Surname" name="surname" value="{{ request.form.surname }}">-->
+            <br/>
+            {{ form.gender.label }}&nbsp;{{ form.gender }}
+            
+</div>
+<br/>
+<div class="input submit">
+                <input type="submit" value="Submit"></div>
+</form>
